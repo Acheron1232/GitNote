@@ -1,0 +1,120 @@
+.header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+.header__logo-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header__menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header__menu-item {
+    padding: 0.1em 0.8em;
+    border-radius: 6px;
+    position: relative;
+}
+
+.header__menu-link {
+    display: block;
+    width: 100%;
+}
+
+
+.header__menu-item--active::after {
+    content: "";
+    width: 110%;
+    height: 2px;
+    background: #f68166;
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+
+    /*background: #182028;*/
+    /*border-bottom: 1px solid #f68166;*/
+}
+
+
+
+.header__menu-item:hover {
+    background: #182028;
+}
+
+.header__toggle{
+    align-self: center;
+    background: url("../images/borgar.svg");
+    height: 1.5em;
+    width: 1.5em;
+    display: none;
+}
+
+#cb1 {
+    opacity: 0;
+    position: absolute;
+    display: none;
+}
+
+
+.header__toggle {
+    display: none;
+}
+
+
+@media (max-width: 560px) {
+    .header__menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__menu-item {
+        width: 90%;
+        text-align: center;
+    }
+
+    .header__toggle,#cb1 {
+        display: block;
+    }
+
+    #header__toggle {
+        display: block;
+    }
+
+    #cb1:checked ~ .header__toggle {
+        transform: scale(1.25);
+        background: url("../images/x.svg");
+    }
+
+    #cb1:checked ~ .header__menu{
+        margin: 2rem 0 0 0;
+        max-height: 100%;
+    }
+
+    .header__menu-item--active::after {
+        height: 110%;
+        width: 2px;
+        right: 0;
+        top: -5%;
+        left: auto;
+        bottom: auto;
+    }
+
+    .header__menu-item--active::before {
+        content: "";
+        height: 110%;
+        width: 2px;
+        background: #f68166;
+        position: absolute;
+        top: -5%;
+        left: 0;
+    }
+}

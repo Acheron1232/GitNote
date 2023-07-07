@@ -1,0 +1,42 @@
+.test {
+    font-size: 2.6rem;
+}
+
+.test > *{
+    margin-top: 2rem;
+}
+
+.test__title {
+    text-align: center;
+}
+
+.test__command-block {
+    background: var(--black-object);
+    border: 1px solid var(--black-border);
+    border-radius: 9px;
+    padding: 0.8rem 1.4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.test__command-question {
+    text-align: center;
+}
+
+.test__command-input {
+    border: 1px solid #000;
+    background: var(--black);
+    resize: none;
+    padding: 1rem;
+    font-size: 0.5em;
+    overflow: hidden;
+    height: auto;
+}
+
+.test__submit {
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem auto 0;
+}

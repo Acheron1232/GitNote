@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Raleway:wght@700&family=Roboto:ital@0;1&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    transition: all 0.1s ease;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    /*font-size: inherit;*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, a:visited, a:hover {
+    color: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
+button, input, textarea{
+    border: none;
+    outline: none;
+    background: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    font-size: 10px;
+    --black: #0d1116;
+    --black-object: #161b22;
+    --black-border: #21262d;
+    --white-text: #e6edf3;
+    --gray-text: #7d8590;
+
+    --green: #238636;
+    --light-green: #349048;
+
+    --red: #dc383c;
+    --light-red: #ec665e;
+
+
+    --blue: #007aff;
+    --light-blue: #2d82f7;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    flex-grow: 1;
+    background: #11161c;
+    padding-bottom: 2rem;
+}
+
+.container {
+    padding:  0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.test {
+    padding:  0 1.5rem;
+    max-width: 765px;
+    margin: 0 auto;
+}
+
+.credits__link {
+    font-size: 1.2rem;
+    color: var(--gray-text) !important;
+}
+
+.footer {
+    background: var(--black);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+body {
+    background: var(--black);
+    color: var(--white-text);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+@media ( max-width: 1200px ) {
+    .container {
+        max-width: 998px;
+    }
+
+}
+
+@media (max-width: 992px ) {
+    .container {
+        max-width: 778px;
+    }
+}
+
+@media (max-width: 767px ) {
+    .container {
+        max-width: none;
+    }
+
+    .test{
+        max-width: 600px;
+    }
+    :root {
+        font-size: 9px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.button {
+    display: block;
+    font-size: 4rem;
+    background: var(--blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 9px;
+    font-weight: 700;
+    padding: 0.1rem 0 0.3rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.button:hover {
+    background: #067afa;
+    border: 1px solid #007AFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 0 0 15px rgba(0, 122, 255, 0.25);
+}

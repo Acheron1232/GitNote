@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/block.css">
+    <title>GitNote</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <nav class="header__inner">
+                <a th:href="@{/}" href="" class="header__logo"><h2 class="header__logo-text">GitNote</h2></a>
+                <input type="checkbox" id="cb1">
+                <label class="header__toggle" for="cb1"></label>
+                <ul class="header__menu">
+                    <li class="header__menu-item header__menu-item--active"><a th:href="@{/}" href="index.html"
+                                                                               class="header__menu-link">Git</a>
+                    </li>
+                    <li class="header__menu-item"><a th:href="@{/github}" href="hub.html" class="header__menu-link">GitHub</a>
+                    </li>
+                    <li class="header__menu-item"><a th:href="@{/tests}" href="test.html"
+                                                     class="header__menu-link">Test</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section th:each="theme : ${themes}" class="block">
+                <h2 th:text="${theme.getKey()}" class="block__title"></h2>
+                <div th:each="command : ${theme.getValue()}" class="block__code">
+                    <div class="block__code-text">
+                        <p class="block__code-command" th:text="${command.getName()}"></p>
+                        <p class="block__code-explaining" th:text="${command.getExplanation()}"></p>
+                    </div>
+                    <div class="block__code-button">
+                        <button class="block__code-copy">
+                            <span class="block__code-copy-img"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <span class="credits__link"> © 2023 GitNote, Inc.
+            <a th:href="@{/credits}" href="credits.html" style="text-decoration: underline">
+                Credits.
+            </a>
+                </span>
+        </div>
+    </footer>
+</div>
+
+<script src="../static/js/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#cb1 {
+    display: none;
+}
+
+
+
+@media (max-width: 700px) {
+
+}

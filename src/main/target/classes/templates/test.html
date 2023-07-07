@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/test.css">
+    <title>GitNote</title>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <nav class="header__inner">
+                <a th:href="@{/}" href="" class="header__logo"><h2 class="header__logo-text">GitNote</h2></a>
+                <input type="checkbox" id="cb1">
+                <label class="header__toggle" for="cb1"></label>
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a th:href="@{/}" href="index.html" class="header__menu-link">Git</a>
+                    </li>
+                    <li class="header__menu-item"><a th:href="@{/github}" href="hub.html" class="header__menu-link">GitHub</a>
+                    </li>
+                    <li class="header__menu-item header__menu-item--active"><a th:href="@{/tests}" href="test.html"
+                                                                               class="header__menu-link">Test</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <form action="/result" class="test" method="post">
+            <h2 class="test__title">Test</h2>
+
+            <div class="test__block">
+                <label class="test__command-block">
+                    <span th:text="${test0}" class="test__command-question"></span>
+                    <textarea name="text1" th:value="${text1}" class="test__command-input" oninput="changeHeight(this)"
+                              placeholder="enter git command"></textarea>
+                    <!--                    Я ПРИБРАВ ПАРАМЕТР NAME ІБО ЙДИ НАХУЙ ВІН МЕНІ БІЛЬШЕ ЧИМ ТОБІ ПОТРІБЕН ХD -->
+                </label>
+            </div>
+
+            <div class="test__block">
+                <label class="test__command-block">
+                    <span th:text="${test1}" class="test__command-question">configurate user's name</span>
+                    <textarea name="text2" th:value="${text2}" class="test__command-input" oninput="changeHeight(this)"
+                              placeholder="enter git command"></textarea>
+                </label>
+            </div>
+            <div class="test__block">
+                <label class="test__command-block">
+                    <span th:text="${test2}" class="test__command-question">commit all changes</span>
+                    <textarea name="text3" th:value="${text3}" class="test__command-input" oninput="changeHeight(this)"
+                              placeholder="enter git command"></textarea>
+                </label>
+            </div>
+            <div class="test__block">
+                <label class="test__command-block">
+                    <span th:text="${test3}" class="test__command-question">reset to previous commit</span>
+                    <textarea name="text4" th:value="${text4}" class="test__command-input" oninput="changeHeight(this)"
+                              placeholder="enter git command"></textarea>
+                </label>
+            </div>
+
+            <button type="submit" class="button test__submit">
+                Submit
+            </button>
+
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="credits__link"> © 2023 GitNote, Inc.
+            <a th:href="@{/credits}" href="credits.html" style="text-decoration: underline">
+                Credits.
+            </a>
+                </span>
+        </div>
+    </footer>
+</div>
+
+<script src="../static/js/adjustHeight.js"></script>
+</body>
+</html>
