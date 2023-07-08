@@ -10,7 +10,7 @@
 }
 
 .result > * {
-    margin-top: 1.1rem;
+    margin-top: 1.5rem;
 }
 
 .result__score {
@@ -50,6 +50,12 @@
 
 .result__image-bad {
     background-image: url('../images/bad.svg');
+}
+
+.result__button-wrapper {
+    width: 100%;
+    display:flex;
+    justify-content: center;
 }
 
 

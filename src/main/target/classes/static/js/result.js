@@ -16,3 +16,5 @@ else {
     imag.classList.add("result__image-bad")
     result.style.color = shzh.bad
 }
+
+result.innerText = (Number(result.innerText) * 25) + "%";

@@ -9,8 +9,26 @@
     <link rel="stylesheet" href="../static/css/header.css">
     <link rel="stylesheet" href="../static/css/info.css">
     <link rel="stylesheet" href="../static/css/result.css">
+    <link
+            rel="shortcut icon"
+            media="(prefers-color-scheme: no-preference)"
+            href="../static/images/favicon-light.svg"
+            type="image/x-icon">
 
-    <title>GitNote</title>
+    <link
+            rel="shortcut icon"
+            media="(prefers-color-scheme: light)"
+            href="../static/images/favicon-light.svg"
+            type="image/x-icon">
+
+
+    <link
+            rel="shortcut icon"
+            media="(prefers-color-scheme: dark)"
+            href="../static/images/favicon-dark.svg"
+            type="image/x-icon">
+
+    <title>GitNote | Results</title>
 </head>
 <body>
 <div class="wrapper">
@@ -37,12 +55,12 @@
             <section class="result">
                 <h2 class="result__title">Your result is:</h2>
                 <div class = "result__score-wrapper">
-                    <p class="result__score" th:text="${message}"></p>
+                    <p class="result__score" th:text="${message}">3</p>
                     <div class="result__image-wrapper">
                         <div class="result__image"></div>
                     </div>
                 </div>
-                <form action="tests" method="get">
+                <form class = "result__button-wrapper" action="tests" method="get">
                 <button type="submit" class="button result__button">
                     Test again!
                 </button>
